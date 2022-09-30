@@ -19,7 +19,7 @@ function App() {
   
   return (
     <React.Fragment>
-      <Routes basename="/food">
+      <Routes basename="/spa">
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path=":name" element={<Category/>}/>

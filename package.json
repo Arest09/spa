@@ -1,6 +1,7 @@
 {
   "name": "spa",
   "version": "0.1.0",
+  "homepage": "https://arest09.github.io/spa/",
   "private": true,
   "dependencies": {
     "@fancyapps/ui": "^4.0.31",
@@ -23,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -33,14 +36,15 @@
   },
   "browserslist": {
     "production": [
-      "since 2010" 
+      "since 2010"
     ],
     "development": [
-      "since 2010" 
+      "since 2010"
     ]
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
   }
