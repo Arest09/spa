@@ -1,0 +1,11 @@
+.header {
+  @apply py-5 bg-dark-blue text-slate-200;
+}
+
+.menu{
+    @apply flex justify-between;
+}
+
+.list{
+    @apply mr-10 hover:text-blue transition-colors;
+}

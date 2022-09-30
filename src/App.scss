@@ -1,0 +1,36 @@
+.container{
+  @apply  mx-auto px-4;
+}
+
+
+.form {
+  @apply max-w-sm  mx-auto mt-7 h-52 p-5 bg-slate-700;
+}
+
+.input {
+  @apply mx-auto block mt-3;
+}
+
+.button {
+  @apply px-3 py-2 bg-btn text-white rounded hover:drop-shadow-2xl ease-in duration-300;
+}
+
+.active{
+  @apply text-active;
+}
+
+.list{
+  position: relative;
+}
+
+.list::after{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(23, 34, 53);
+  border-radius: 50%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,11 @@
+.wrapper{
+    @apply flex justify-between mx-auto max-w-sm;
+}
+
+.input{
+    @apply border-solid border-2 border-sky-800 block mb-8 max-w-xs rounded-lg px-2  py-1;
+}
+
+.button{
+    @apply  px-7 py-1 bg-cyan-900 text-white rounded hover:drop-shadow-2xl ease-in duration-300 self-start;
+}

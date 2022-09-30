@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./reset.scss";
+import "./App.scss";
+
+import { Route, Routes } from "react-router-dom";
+import React from "react";
+
+import { Layout } from "./components/Layout/Layout";
+import { About } from "./pages/About-us";
+import { Contact } from "./pages/Contact";
+import { Home } from "./pages/Home";
+import { Category } from "./pages/Category";
+import { Recipe } from "./pages/Recipe";
+import { Error } from "./pages/Error";
+
+
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Routes basename="/food">
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path=":name" element={<Category/>}/>
+          <Route path="meal/:id" element={<Recipe/>}/>
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </React.Fragment>
   );
 }
 
